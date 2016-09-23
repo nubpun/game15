@@ -11,11 +11,27 @@ namespace Simple
         static void Main(string[] args)
         {
             Console.WriteLine("Hello world with github");
-            Game game1 = new Game(1, 2, 3, 4);
-            game1.printState();
-            game1[1, 1] = 0;
-            game1.printState();
-            Console.ReadKey();
+            Game game1 = new Game(0, 1, 2 ,3);
+            try
+            {
+                game1.PrintState();
+                game1.Shift(1);
+                game1.PrintState();
+                game1.Shift(3);
+                game1.PrintState();
+                game1.Shift(2);
+                game1.PrintState();
+                Console.ReadKey();
+                game1.Shift(3);
+                game1.PrintState();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                Console.WriteLine(ex.Message);
+                Console.ReadKey();
+            }
+            
         }
     }
 }
