@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Simple
 {
-    class Program
+    class Game
     {
-        static void Main(string[] args)
+        int[,] field;
+        public Game(int n)
         {
-            Console.WriteLine("Hello world with github");
-            Game game1 = new Game(2);
+            field = new int[n,n];
+            for (int i = 0; i < n; i++)
+                field[i, i] = i;
         }
     }
 }
