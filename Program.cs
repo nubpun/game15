@@ -10,20 +10,19 @@ namespace Simple
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world with github");
-            Game game1 = new Game(0, 1, 2 ,3);
+            Game game = new Game(0, 1, 2 ,3);
             try
             {
-                game1.PrintState();
-                game1.Shift(1);
-                game1.PrintState();
-                game1.Shift(3);
-                game1.PrintState();
-                game1.Shift(2);
-                game1.PrintState();
+                game.PrintState();
+                game.Shift(1);
+                game.PrintState();
+                game.Shift(3);
+                game.PrintState();
+                game.Shift(2);
+                game.PrintState();
                 Console.ReadKey();
-                game1.Shift(3);
-                game1.PrintState();
+                game.Shift(3);
+                game.PrintState();
             }
             catch (Exception ex)
             {
